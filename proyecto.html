@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Invie - Tus Mejores Guitarras!!</title>
+    <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,600i" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/invie.css">
+    <meta  name = "viewport"  content = "width = device-width, initial-scale = 1, user-scalable = no" />
+  </head>
+  <body>
+    <section class="portada backgroun">
+      <header class="header">
+        <figure id="logo">
+          <img  src="images/invie.png" whidth="180" height="60" alt="Invie Logotipo"/>
+          <span class="burguer-button icon-menu" id="burguer-button"></span>
+        </figure>
+
+        <nav id="menu">
+          <ul>
+            <li><a href="proyecto.html">Home</a></li>
+            <li><a href="#guitarras">Guitarras</a></li>
+            <li><a href="precios.html">Precios</a></li>
+          </ul>
+        </nav>
+
+      </header>
+      <div id="contenedor">
+      <h1 id="titulo">Guitarras <span>Invie</span>sibles</h1>
+      <h3 id="subtitulo">Se la estrella de rock que siempre quisiste ser<h3>
+        <a id="boton" href="#guitarras">Conoce mas</a>
+      </div>
+    </section>
+    <section id="guitarras">
+      <h2>Nuestras Guitarras</h2>
+        <article id="acustica">
+        <img id="derecha" src="images/invie-acustica.png" width="350" height="" alt="guitarra acustica" />
+        <div id="contenedor-guitarras">
+        <h3>Invie Acustica</h3>
+        <ol>
+          <li><a>Etilo vintage</a></li>
+          <li><a>Madera pura</a></li>
+          <li><a>Incluye estuche invisible de aluminio</a></li>
+        </ol>
+      </div>
+      </article>
+      <article id= "clasica">
+        <img id="izquierda" src="images/invie-classic.png" width="350" alt="invie clasic" />
+        <div id="contenedor-guitarras-b">
+        <h3>Invie Clasic</h3>
+        <ol>
+          <li><a>Etilo vintage</a></li>
+          <li><a>Liviana</a></li>
+          <li><a>Inicia tu caminocomo rockstar</a></li>
+        </ol>
+      </div>
+      </article>
+
+    </section>
+    <footer id="footer">
+      <div id="contenedor">
+      <div id="contacto">
+        <img src="images/invie-white.png" alt="logo blanco"/>
+        <a href="tel:+584140664961"><strong>Telefono :</strong></a><span>04140664961</span>
+        <a href="mailto:Contacto@invie.com"><strong>E-mail: </strong><span>Contacto@invie.com</span>
+      </div>
+      <form id="formulario">
+        <div id="col1">
+          <label for="nombre">Nombre</label>
+          <input type="text" required id="nombre" placeholder="Pon Tu Nombre" name="nombre" />
+          <label for="email">E-mail</label>
+          <input type="email" required id="email"  placeholder="Correo Electronico" name="email"/>
+          <div id="sexo">
+            <label for="mujer">
+              <input type="radio" id="mujer" name="sexo" value="mujer"> Mujer
+            </label>
+            <label for="hombre">
+              <input type="radio"  id="hombre" name="sexo" value="hombre"> Hombre
+            </label>
+          </div>
+            <div id="intereses">
+          <label for="cotizacion">
+            <input type="checkbox" id="cotizacion" name="intereses"/> Cotizacion
+          </label>
+
+          <label for="reclamos">
+            <input type="checkbox" id="reclamos" name="intereses"/> Reclamos
+          </label>
+
+
+          <label for="comentarios">
+            <input type="checkbox" id="comentarios" name="intereses"/> Comentarios
+          </label>
+
+          <label for="otros">
+            <input type="checkbox" id="otros" name="intereses"/> Otros
+          </label>
+        </div>
+        </div>
+
+          <div id="col2">
+          <label for="comentarios">Comentarios</label>
+          <textarea name="comentarios" rows="8" cols="30" ></textarea>
+          <input type="submit" id="boton2" value="Enviar"/>
+        </div>
+
+
+
+      </form>
+    </div>
+    </footer>
+
+    <script>
+      var $burguerButton = document.getElementById("burguer-button");
+      var $menu = document.getElementById("menu");
+      $burguerButton.addEventListener("click", function() {
+         $menu.classList.toggle('active')
+      });
+    </script>
+  </body>
+</html>

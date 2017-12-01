@@ -1,0 +1,36 @@
+/*portada*/
+#titulo{
+  font-size: 45px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+#subtitulo{
+  font-size: 18px;
+}
+.portada{
+  height: auto;
+}
+#contenedor #boton{
+  margin-bottom: 15px;
+}
+/*portada*/
+
+/*guitarras*/
+#guitarras{
+  text-align: center;
+  width: auto;
+}
+#derecha, #izquierda{
+  float: none;
+  position: static;
+}
+#contenedor-guitarras h3{
+  margin: 0;
+}
+#contenedor-guitarras-b h3{
+  padding: 0;
+}
+#guitarras li{
+  list-style: none;
+}
+/*guitarras*/
