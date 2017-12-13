@@ -5,12 +5,15 @@
     <title>Precios de - Tus Mejores Guitarras!!</title>
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,600i" rel="stylesheet">
     <link rel="stylesheet" href="estilos/invie.css">
+    <meta  name = "viewport"  content = "width = device-width, initial-scale = 1, user-scalable = no" />
   </head>
-    <body>
-      <header class="header backgroun">
+    <body id="precios">
+      <header id="header" class="backgroun">
+        <div class="contenedor">
         <figure id="logo">
           <img  src="images/invie.png" whidth="180" height="60" alt="Invie Logotipo"/>
         </figure>
+        <span class="burguer-button icon-menu" id="burguer-button"></span>
         <nav id="menu">
             <ul>
               <li><a href="proyecto.html">Home</a></li>
@@ -19,10 +22,16 @@
             </ul>
               </nav>
 
+            </div>
       </header>
-      <div id="contenedor">
-      <table>
+      <section class="CT">
+
+      <div id="contenedor-t">
+      <table id="tabla">
         <tr>
+        <th>Modelo</th>
+        <th>Precios</th>
+        <th>Descripcion</th>
         <th>Modelo</th>
         <th>Precios</th>
         <th>Descripcion</th>
@@ -32,13 +41,22 @@
           <td>Invie Clasic</td>
           <td>$300</td>
           <td>Es una Guitarra muy pro</td>
-        </tr>
-        <tr>
           <td>Invie Clasic</td>
           <td>$300</td>
           <td>Es una Guitarra muy pro</td>
         </tr>
         <tr>
+          <td>Invie Clasic</td>
+          <td>$300</td>
+          <td>Es una Guitarra muy pro</td>
+          <td>Invie Clasic</td>
+          <td>$300</td>
+          <td>Es una Guitarra muy pro</td>
+        </tr>
+        <tr>
+          <td>Invie Clasic</td>
+          <td>$300</td>
+          <td>Es una Guitarra muy pro</td>
           <td>Invie Clasic</td>
           <td>$300</td>
           <td>Es una Guitarra muy pro</td>
@@ -47,6 +65,7 @@
       </table>
     </div>
 
+  </section>
       <footer id="footer">
         <div id="contenedor">
         <div id="contacto">
@@ -92,7 +111,7 @@
             <label for="comentarios">Comentarios</label>
             <textarea name="comentarios" rows="8" cols="30" ></textarea>
 
-            <input type="submit" value="Enviar" />
+            <input type="submit"  id="boton2"value="Enviar" />
           </div>
 
 
@@ -101,5 +120,34 @@
       </div>
       </footer>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js'>
+      </script>
+      <script>
+      var $burguerButton = document.getElementById("burguer-button");
+      var $menu = document.getElementById("menu");
+      $burguerButton.addEventListener("click", toggleMenu)
+
+      function toggleMenu() {
+        $burguerButton.classList.toggle("icon-close");
+        $menu.classList.toggle('active');
+      }
+      function mostrarMenu() {
+        $burguerButton.classList.toggle("icon-close");
+        $menu.classList.add('active');
+      }
+      function quitarMenu() {
+        $burguerButton.classList.toggle("icon-close");
+        $menu.classList.remove('active');
+      }
+      var bLazy = new Blazy ({
+        selector: 'img'
+      });
+      var $body = document.body;
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', quitarMenu);
+      gestos.on('swiperight', mostrarMenu);
+      </script>
+    </script>
     </body>
   </html>

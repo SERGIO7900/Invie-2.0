@@ -102,6 +102,7 @@ body{
   font-size: 30px;
   color: white;
   line-height: 20px;
+  padding-right: 5px;
 
 }
 #menu{
@@ -144,6 +145,7 @@ text-decoration: none;
 #guitarras h2{
   font-size: 30px;
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 #acustica{
   font-family: 'Montserrat', sans-serif;
@@ -186,7 +188,7 @@ text-decoration: none;
   float: right;
      padding-right: 30px;
      position: relative;
-     top: -125px;
+     top: -90px;
 
 }
 #izquierda{
@@ -286,7 +288,7 @@ margin-bottom: 0px;
 #boton2{
   font-family: 'Montserrat', sans-serif;
 color: white;
-text-decoration: none;
+text-decoration: underline #ff6d50;
   font-size: 20px;
 
 display: inline-block;
@@ -295,12 +297,19 @@ background: linear-gradient(to right,#ff6d50,#fe3a4e);
 margin-top: 5px;
 cursor: pointer;
 }
+ .contenedor{
+  max-width: 800px;
+  margin: auto;
+}
 
+.CT{
+  margin: 50px;
 
-
-
-table{
+}
+#tabla{
   width: 100%;
+  margin: auto;
+  max-width: 800px;
 }
 
 th{
@@ -324,16 +333,7 @@ input:focus, textarea:focus{
   background: lightgrey;
 }
 .burguer-button{
-  height: 40px;
-  width: 40px;
-  background: #356777;
-  border-radius: 50%;
-  display: inline-block;
-  text-align: center;
-  line-height: 40px;
-  float: left;
-  cursor: pointer;
-
+  display: none;
 }
 
 /*MEDIA QUERYS*/
@@ -378,6 +378,13 @@ input:focus, textarea:focus{
     padding: 0;
     margin: 0;
   }
+  #contenedor-t{
+    overflow: auto;
+    border: 3px solid #273b47;
+  }
+  .CT{
+    margin: 50px 20px;
+  }
 
 }
 
@@ -417,13 +424,14 @@ input:focus, textarea:focus{
   #col1{
     margin: 0;
   }
+
 }
 
 
 
 @media screen and (max-width: 680px) {
 
-  .header{
+  #header{
     text-align: center;
   }
 
@@ -443,14 +451,33 @@ input:focus, textarea:focus{
 }
 
 @media screen and (max-width: 500px) {
+  #precios .backgroun #logo {
+    padding: 50px 0;
+  }
 
   .burguer-button{
-    display: block;
+    height: 40px;
+    width: 40px;
+    background: #356777;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    left: 6%;
+    top: 3%;
+    color: white;
     z-index: 3;
+    position: fixed;
+
+  }
+  .burguer-button:hover{
+  transform: rotate(180deg);
+  transition: .9s;
   }
   #menu{
-    background: rgba(255, 60, 88, .7);
-    position: absolute;
+    background: rgba(255, 60, 88, .9);
+    position: fixed;
     top: 0;
     left: -100%;
     right: 0;
@@ -458,9 +485,10 @@ input:focus, textarea:focus{
     z-index: 2;
     margin: 0;
     width: 100%;
+    height: auto;
     display: flex;
   align-items: center;
-  transition: .3s;
+  transition: .5s;
   }
   #menu.active{
     left: 0;
@@ -485,11 +513,20 @@ input:focus, textarea:focus{
   .portada{
     text-align: center;
   }
+  #boton{
+    display: block;
+  }
+  #col2{
+    align-items: stretch;
+  }
   #titulo{
     font-size: 35px;
   }
   #subtitulo{
     font-size: 16px;
+  }
+  #guitarras{
+    margin: 0 8px;
   }
   #guitarras img{
     width: 200px;
@@ -507,3 +544,36 @@ input:focus, textarea:focus{
 
 
 /*MEDIA QUERYS*/
+
+.contenedor-video-responsive{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.video-responsive{
+  max-width: 500px;
+  width: 100%;
+}
+.contenedor-iframe{
+  position: relative;
+  padding-top: 56.25%;
+  border:8px solid #1F313C;
+  border-radius: 5px;
+  padding-bottom: auto;
+}
+.iframe{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .backgroun{
+    background-image: url('../images/background2x.png');
+  }
+}
